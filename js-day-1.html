@@ -24,6 +24,54 @@
         var nam = "Ghani";
         var last = "Hussaini";
         alert(nam+ " "+last);
+        // confirmation message most used for yes/no
+        confirm("Are you sure to login");
+        /*
+        operators
+        1 arithmatic op: +,-,*,/,%
+        2 assignment op: =
+        3 comparission op: ==,>,<,>=,<=,=!
+        4 logical op: And-----used like this && Or----used like this || NOT----used like this !
+        */
+       
+        // Arithmatic
+        
+       var salary = 12500;
+       var bonus = 3500;
+       var net_total = salary + bonus; // +
+       document.write("<br>");
+       document.write("Total Salary is :",net_total);
+
+       var month_expense = 3500;
+       var money_to_support_family=net_total-month_expense; // - 
+       document.write("<br>");
+       document.write("Money to support my family expense : ",money_to_support_family);
+       document.write("<br>");
+       // to find money per day according to the salary
+       var money_per_day = salary / 30;
+       var remainder = salary % 30;
+       document.write("Money per day is : ",money_per_day);
+       document.write("<br>");
+        document.write("The Remainder is : ",remainder);
+         document.write("<br>");
+
+       
+       // per hour = 50 af : a person work five hours in a day than find it and also the whole salary of the month.
+       var per_hour = 50;
+       var five_hours = 50*5;
+       var whole_salary = five_hours*30;
+       document.write("Per Hour : ",per_hour," af");
+       document.write("<br>");
+       document.write("Five Hours : ",five_hours," af");
+       document.write("<br>");
+      document.write("Total Month Salary : ",whole_salary," af");
+       document.write("<br>");
+
+
+
+
+
+
 
     </script>
 </body>
