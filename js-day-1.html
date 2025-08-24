@@ -66,13 +66,51 @@
        document.write("<br>");
       document.write("Total Month Salary : ",whole_salary," af");
        document.write("<br>");
+       /*
+       Conditional Statements:
+       if statement
+       if else statement
+       if else if statement
+        */
+       var marks=49;
+       if(marks<50)
+       {
+        document.write("You are fail");
+       }else    {
+         document.write("You are pass");
+       }
+       document.write("<br>");
+       // simple calculator with user input
 
-
-
-
-
-
-
+       var a1;
+       var b1;
+       var op;
+       op = '+';
+       a1 = prompt("Enter Value1");
+       b1 = prompt("Enter Value 2");
+       op = prompt("Enter the operation to be done");
+       var c;
+       // we can to initialize them in one line but later
+       if(op == '+')
+       {
+        c = a + b;
+        document.write("The sum of a and b is : ",c);
+       }else if(op == '-')
+       {
+        c = a - b;
+        document.write("The value of Subtraction is : ",c);
+       }else if(op == '*')
+       {
+        c = a * b;
+        document.write("The value of Multiplication is : ",c);
+       }else if(op == '/')
+       {
+        c = a / b;
+        document.write("The value of Division is : ",c);
+       }else
+       {
+        document.write("You Entered invalid operation");
+       }
     </script>
 </body>
 </html>
