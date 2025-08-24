@@ -31,8 +31,6 @@
                                                 {
                                                       c = a/b;
                                                       document.write(c);
-                                                       break;
-
                                                 }else
                                                 {
                                                     document.write("connot divid by zero!");
@@ -43,8 +41,69 @@
                                                     }
                                                     /*
                                                     Looping (loop)
-                            
+                                                    1. for loop: repeat a block of code a certain number of times
+                                                    2. while loop: repeat a block of code while a certain condition is true
+                                                    3. do while loop: repeat a block of code at least once, and then while a certain condition is true
+                                                    4. for in loop: iterate over the properties of an object
+                                                    5. for of loop: iterate over the values of an iterable object (like an array or a string)
+                                                    6. for each loop: iterate over the elements of an array and execute a function for each element
+                                                    7. break and continue: control the flow of a loop by breaking out of it or skipping to the next iteration
                                                     */
+                                                    // for loop
+                                                    for(var i=1; i<=5; i++)
+                                                    {
+                                                        document.write("<br> Hello World!"+i);
+                                                    }
+                                                    // while loop
+                                                    var j=1;
+                                                    while(j<=5)
+                                                    {
+                                                        document.write("<br> Hello World!"+j);
+                                                        j++;
+                                                    }
+                                                    // do while loop
+                                                    var k=1;
+                                                    do
+                                                    {
+                                                        document.write("<br> Hello World!"+k);
+                                                        k++;    
+                                                    }while(k<=5);
+                                                    // for in loop
+                                                    var person = {fname:"John", lname:"Doe", age:25};
+                                                    var text = "";
+                                                    for (var x in person) {
+                                                        text += person[x] + " ";
+                                                    }
+                                                    document.write("<br>"+text);
+                                                    // for of loop
+                                                    var cars = ["BMW", "Volvo", "Mini"];
+                                                    var text1 = ""; 
+                                                    for (var x of cars) {
+                                                        text1 += x + " ";
+                                                    }
+                                                    document.write("<br>"+text1);
+                                                    // for each loop
+                                                    var numbers = [45, 4, 9, 16, 25];
+                                                    var txt = "";   
+                                                    numbers.forEach(myFunction);
+                                                    function myFunction(value) {
+                                                        txt += value + " ";
+                                                    }
+                                                    document.write("<br>"+txt);
+                                                    // break and continue
+                                                    var text2 = "";
+                                                    for (var i = 0; i < 10; i++) {
+                                                        if (i === 3) { break; }
+                                                        text2 += i + " ";
+                                                    }
+                                                    document.write("<br> Break: "+text2);
+                                                    var text3 = "";
+                                                    for (var i = 0; i < 10; i++) {
+                                                        if (i === 3) { continue; }
+                                                        text3 += i + " ";
+                                                    }
+                                                    document.write("<br> Continue: "+text3);
+                                                    
   
     </script>
 </body>
