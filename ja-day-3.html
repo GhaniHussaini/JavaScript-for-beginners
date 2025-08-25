@@ -12,11 +12,35 @@
   // code to be executed    
 }</code></pre>
 <script>
-    function myfunction()
+    function myfunction()// function definition
     {
-        document.write("Welcome to javascriopt programming...")  // The function returns the product of p1 and p2
+        document.write("<br>Welcome to javascriopt programming...")
+         document.write("<br>Function well called...")
+          document.write("<br>Function executed successfully...")
+
     }   
-    myfunction();
+    myfunction();// function call 
+
+    function sum(){// function definition
+        var a=10;
+        var b=20;
+        var c=Number(a+b);
+        document.write("<br>Sum is: "+c)
+    }
 </script>
+
+<br>
+<button type="button" onclick="sum()"> Click here to see the sum of a and b</button> --- Function call inside the button
+<br>
+<script>
+    function fullname(fname,lname)// function definition for concatination of fname and lname
+    {
+        document.write("<br>Full name is: "+fname+" "+lname);
+    }
+    var firtsname=prompt("Enter your first name: ");
+    var lastname=prompt("Enter your last name: ");
+    fullname(firtsname,lastname);// function call
+</script>
+
 </body>
 </html>
