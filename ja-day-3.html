@@ -41,6 +41,22 @@
     var lastname=prompt("Enter your last name: ");
     fullname(firtsname,lastname);// function call
 </script>
-
+/*
+                                         * assignment
+1. Write a function to concatinate two strings from username and lastname and display the full name
+solution: first create a form to take the input from user and then create a function to concatinate the two strings and display the full name
+*/
+<br>
+<script>
+    function getFullName()// function definition
+    {
+        var fullname=document.myform.fname.value+" "+document.myform.lname.value;
+        alert("Full name is: "+fullname);
+    }
+</script>
+<form name="myform">
+    <input type="text" id="fname" name="fname"><br>
+    <input type="text" id="lname" name="lname"><br>
+    <input type="button" value="Submit" onclick="getFullName()">
 </body>
 </html>
