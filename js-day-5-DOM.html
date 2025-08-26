@@ -25,6 +25,12 @@
         Student Name: <input type="text" id="sname" name="sname"> <br><br>
         Marks: <input type="text" id="marks" name="marks"> <br><br>
         <input type="button" value="Click Me" onclick="getfullInfo()">
+        <hr>
+        <h2>Example 3: new-style DOM access technique.</h2> <!-- Example 3 -->
+        Name: <input type="text" id="name_get_id"> <br><br>
+        Last Name: <input type="text" id="lastname_get_id"> <br><br>
+        Age: <input type="text" id="age_get_id"> <br><br>
+        <input type="button" value="Click Me" onclick="function_by_id()">
     </form>
     <script>
         // Example 1: old-style DOM access technique.
@@ -45,6 +51,22 @@
             } else {
                 document.write("<br>" + "Result: Fail");
             }
+        }
+        // Example 3: new-style DOM access technique.
+        // getElementById()
+        function function_by_id(){
+            var name = document.getElementById("name_get_id").value;
+            var lname = document.getElementById("lastname_get_id").value;
+            var age = document.getElementById("age_get_id").value;
+            //alert("Full Name: " + name + " " + lname + " Age: " + age);
+            if(age < 18){
+                document.write("You are not eligible to vote.<br>");
+            } else {
+                document.write("You are eligible to vote.<br>");  
+                document.write("Your Full Name is: " + name + " " + lname + "<br>");
+                document.write("Your Age is: " + age);  
+            }
+            
         }
     </script>
 </body>
