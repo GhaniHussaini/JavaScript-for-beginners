@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Js day-4</title>
+</head>
+<body>
+  <p>welcome to javascript programming</p>
+  <script>
+    /*
+    javascript Array: it is a collection of similar data types
+    it is denoted by []
+    index always start with 0
+    1D array: it is a single dimensional array
+    2D array: it is a two dimensional array
+    3D array: it is a three dimensional array
+              Array Declaration And Initialization
+    1 var arr = []; // empty array declaration and common used
+    2 var arr = new Array(); // empty array declaration but not common used
+    */
+   var fruits = ["apple","banana","grapes","orange"];
+   document.write(fruits);
+    document.write("<br>");
+    // we can access the array element by using index
+    document.write(fruits[0]); // it will print apple
+    // se can accress all the element of array by using loop
+    document.write("<br>");
+    for (var i=0; i<fruits.length; i++){
+        document.write(fruits[i]);
+        document.write("<br>");
+    }
+// one good example of array
+var studentname =[];
+var studentmark =[];
+var n;
+for(n=1; n<=5; n++){
+   studentname[n] = prompt("Enter Student Name");
+   studentmark[n] =prompt("Enter Student Mark For "+studentname[n]);
+}
+for(n=1; n<=5;n++){
+    document.write("Student Name is : ",studentname[n]);
+    document.write("<br>");
+    document.write("Student Mark is : ",studentmark[n]);
+    document.write("<br>");
+}
+
+  </script>
+</body>
+</html>
