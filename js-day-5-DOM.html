@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p>DOM: Doucment Object Model<br></p>
+    <!-- 
+                               All major DOM methods
+    old methods: like in example 1 and example 2
+    getElementById()
+    getElementByClassName()
+    getElementByTagName()
+    querySelector()
+    querySelectorAll()
+    -->
+    <h2>Example 1: old-style DOM access technique.</h2>
+    <form name="frm1">
+        Name: <input type="text" id="name" name="fname"> <br><br>
+        Last Name: <input type="text" id="lname" name="lname"> <br><br>
+        <input type="button" value="Click Me" onclick="getfullname()">
+        <hr>
+        <h2>Example 2: old-style DOM access technique.</h2>
+        Student Name: <input type="text" id="sname" name="sname"> <br><br>
+        Marks: <input type="text" id="marks" name="marks"> <br><br>
+        <input type="button" value="Click Me" onclick="getfullInfo()">
+    </form>
+    <script>
+        // Example 1: old-style DOM access technique.
+        function getfullname(){
+            var name =document.frm1.fname.value;
+            var lname = document.frm1.lname.value;
+            //var fullName = name + " " + lname;
+            //alert("Full Name: " + name + " " + lname);
+            document.write("Your Full Name is: " + name + " " + lname);
+        }
+        //example 2: old-style DOM access technique.
+        function getfullInfo(){
+            var sname = document.frm1.sname.value;
+            var marks = document.frm1.marks.value;
+            document.write("Student Name: " + sname + "<br>" + "Marks: " + marks);
+            if(marks >= 60){
+                document.write("<br>" + "Result: Pass");
+            } else {
+                document.write("<br>" + "Result: Fail");
+            }
+        }
+    </script>
+</body>
+</html>
