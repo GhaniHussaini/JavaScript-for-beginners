@@ -31,6 +31,12 @@
         Last Name: <input type="text" id="lastname_get_id"> <br><br>
         Age: <input type="text" id="age_get_id"> <br><br>
         <input type="button" value="Click Me" onclick="function_by_id()">
+        <hr>
+        <h2>Example 4: new-style DOM access technique.</h2> <!-- Example 4: getByName -->
+        Name: <input type="text" name="name_get_by_name"> <br><br>
+        Last Name: <input type="text" name="lastname_get_by_name"> <br><br>
+        Age: <input type="text" name="age_get_by_name"> <br><br>
+        <input type="button" value="Click Me" onclick="function_by_name()">
     </form>
     <script>
         // Example 1: old-style DOM access technique.
@@ -67,6 +73,18 @@
                 document.write("Your Age is: " + age);  
             }
             
+        }
+          // example 4: new-style DOM access technique.
+        // getElementsByClassName()
+      
+        function function_by_name(){
+            var name = document.getElementsByName("name_get_by_name")[0].value
+            var lname = document.getElementsByName("lastname_get_by_name")[0].value
+            var age = document.getElementsByName("age_get_by_name")[0].value
+            var full_name = name + " " + lname;
+            //
+            alert("Full Name: " + name + " " + lname + " Age: " + age);
+            document.write("Your Full Name is: " + name + " " + lname + "<br>" + "Your Age is: " + age);
         }
     </script>
 </body>
