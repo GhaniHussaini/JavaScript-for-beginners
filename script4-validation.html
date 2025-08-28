@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Validation</title>
+      <!-- Meta tags or CSS links can be added here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 5px 15px;
+        }
+        form {
+            max-width: 300px;
+            margin: auto;
+            border: 1px solid #3d3838;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+
+    </style>
+</head>
+<!--Validation form-->
+<body>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="pass">
+        <label for="Comfirtm Password">Comfirtm Password</label>
+        <input type="password" id="Comfirtm Password" name="CPass">
+        <br><br>
+        <input type="checkbox" id="checkbox" name="checkbox" value="Show Password" onclick="showPass()">
+        <input type="submit" value="Login" onclick="checkPass(); return false;">
+    </form>
+    <!--JavaScript Valication-->
+    <script>
+        function showPass()
+        {
+            if(document.getElementsByName("checkbox")[0].checked)
+            {
+                document.getElementsByName("pass")[0].type = "text";
+                document.getElementsByName("CPass")[0].type = "text";
+            }else{
+                document.getElementsByName("pass")[0].type = "password";
+                document.getElementsByName("CPass")[0].type = "password";
+            }
+        }
+
+        function checkPass()
+        {
+            var p = document.getElementsByName("pass")[0].value;
+            var c = document.getElementsByName("CPass")[0].value;
+            if(c === p)
+            {
+                alert("Password matched");
+            }else{
+                alert("Password not matched");
+                document.getElementsByName("CPass")[0].value = "";
+                document.getElementsByName("CPass")[0].focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
