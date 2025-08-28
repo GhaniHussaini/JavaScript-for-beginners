@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validation</title>
+</head>
+<body>
+    <!--
+                                                                validation
+    1. HTML5 validation attributes
+        a. required
+        b. pattern
+        c. type
+        d. min, max, minlength, maxlength
+    2. javaScript validation
+    a. onsubmit
+    b. oninput
+    c. onblur
+    d. onchange
+    e. onfocus
+    d.onclick
+    f. onkeydown
+    g. onkeyup
+    h. onkeypress
+    i. Custom validation messages
+    and many more...
+    -->
+    <h1>Form Validation</h1>
+    <form>
+        Name: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Submit" onclick="valication()">
+        </form>
+
+
+    <script>
+        function valication()
+        {
+            let name = document.getElementsByName("username")[0].value;
+            let password = document.getElementsByName("password")[0].value;
+            if(name ==="" && password ==="")
+            {
+               alert("Please fill all the fields");
+               return false;
+            }
+            else if(name ==="")
+            {
+                alert("Please enter your username");
+                return false;
+            }else if(password ==="")
+            {
+                alert("Please enter your password");
+                return false;
+            }
+            else if(password.length < 6)
+            {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+            else
+            {
+                if(name ==="admin" && password ==="admin123")
+                {
+                    alert("Welcome Admin");
+                }
+                else if(name !=="admin")
+                {
+                    alert("Invalid username");
+                    return false;
+                }
+                else if(password !=="admin123")
+                {
+                    alert("Invalid password");
+                    return false;
+                }
+                else if(!isNaN(name))
+                {
+                    alert("Username must be a string");
+                    return false;
+                }
+                else
+                {
+                    alert("Invalid username and password");
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
