@@ -20,7 +20,33 @@
     <form>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email"><br><br>
-        <input type="button" value="Submit">
+        <input type="button" value="Submit" onclick="email_validation()">
     </form>
+
+<!--JS Script-->
+    <script>
+        function email_validation()
+        {
+
+            var em = document.getElementsByName("email")[0].value;
+            if(em ==="")
+            {
+                alert("Email is empty!!!")
+            }
+            else if(em.includes(" "))
+            {
+                alert("email should not contain spaces");
+            }else if (!em.includes("@") || !em.includes("."))
+            {
+                alert("email should contain @ and .");
+            }else if (em.indexOf("@") > em.lastIndexOf("."))
+            {
+                alert("Invalid email format");
+            }else{
+                alert("Valid email");
+            }
+        }
+
+    </script>
 </body>
 </html>
