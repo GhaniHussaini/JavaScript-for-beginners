@@ -1,57 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One_Month_JS_Programming</title>
+    <title>MenuBar</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    <script src="/project/script.js"></script>
 </head>
-<!--
-Author: Ghani Hussaini software engineer
-Date: 2025-08-27
-                               Topic 1: js as external file
-                               Topic 2: BOM -- Browser Object Model
-                               BOM: Browser Object Model: it is a programming API/Interface for web browser. or let you say it is a collection of objects that are exposed by the web browser.
-                                 All major BOM methods
-                                 window
-                                    location
-                                    history
-                                    navigator
-                                    screen
-                                    alert()
-                                    prompt()
-                                    confirm()
-                                    setTimeout()
-                                    setInterval()
-                                    clearTimeout()
-                                    ...
-
-
--->
 <body>
-    <h1>One Month JS Programming</h1>
-    <h2>js as external file</h2>
-    <p>This is index.html file</p>
-    <p>We are learning how to use external js file</p>   
-    <p>We are learning BOM: Browser Object Model</p> 
+    <main>
+        <aside class="sidebar">
+            <header>
+                <button onclick="hideSidebar()"><i class="fa fa-close"></i> </button>
+            </header>
+            <ul>
+                <li><a href=""></a>Admin Dashboard</li>
+                <li><a href=""></a>Student</li>
+                <li><a href=""></a>Teacher</li>
+                <li><a href=""></a>Exam</li>
+                <li><a href=""></a>Attendence</li>
+                <li><a href=""></a>Report</li>
+                <li><a href=""></a>About Us</li>
+            </ul>
+        </aside>
+            <section>
+        <button onclick="showSidebar()"><i class="fa fa-bars"></i></button>
+    </section>
+    </main>
 
-    name: <input type="text" name="name"> <br><br>
-    age: <input type="text" name="age"> <br><br>
-    <input type="button" value="Click Me" onclick="showBOMInfo()">
-    <hr>
-   
-    <!--Events Section-->
-     <h2>Event in JavaScript</h2>
-     <p>Event is an action that occurs in the browser, such as a user clicking a button, moving the mouse, or pressing a key. Events are used to trigger specific functions or behaviors in response to user interactions.</p>
-
-    <form>
-        <input type="text" name="username" placeholder="Enter username" onmouseover="event_mouseover()"> <br><br>
-        <input type="password" name="password" placeholder="Enter password" onmouseover="event_mouseover()"> <br><br>
-        <input type="submit" value="Login" onclick="event_click()" >
-     </form>
-
-     <!--Validation throuogh JS Section -->
-     
-
-
-    <script src="script.js"></script>
-    <script src="script2-event.js"></script>
 </body>
+<footer>
+    <p>Copyright &copy; 2024</p>
+    
+
+</footer>
 </html>
